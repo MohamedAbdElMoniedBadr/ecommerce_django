@@ -1,12 +1,14 @@
 {% extends 'main.html' %}
 
-
 {% block content %}
-<h2>hi</h2>
-<h2>hi</h2>
-<h2>hi</h2>
-<h2>hi</h2>
-<h2>hi</h2>
-<h2>hi</h2>
+
+<div>
+    <h1> name -- description -- price</h1>
+    {% for item in itemss %}
+        <h2> {{item.name}} --  {{item.description}} -- {{item.price}}</h2>
+    {% endfor %}
+
+</div>
+    
 {% endblock content %}
     
