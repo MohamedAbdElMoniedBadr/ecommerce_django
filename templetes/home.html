@@ -3,9 +3,11 @@
 {% block content %}
 
 <div>
-    <a href="{% url 'create-form' %}"><h1>Create Room</h1></a>
+    <a href="{% url 'create-form' %}"><h1>Create Product</h1></a>
     <h2> name -- description -- price</h2>
     {% for item in itemss %}
+    <a href="{% url 'update-form' item.id %}"><h2>update this product</h2></a>
+    <a href="{% url 'delete-form' item.id %}"><h2>delete this product</h2></a>
     <h3> {{item.name}} --  {{item.description}} -- {{item.price}}</h3>
     <span>posted by <strong>{{item.seller.username}}</strong></span>
     <hr>
