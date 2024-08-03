@@ -3,9 +3,12 @@
 {% block content %}
 
 <div>
-    <h1> name -- description -- price</h1>
+    <a href="{% url 'create-form' %}"><h1>Create Room</h1></a>
+    <h2> name -- description -- price</h2>
     {% for item in itemss %}
-        <h2> {{item.name}} --  {{item.description}} -- {{item.price}}</h2>
+    <h3> {{item.name}} --  {{item.description}} -- {{item.price}}</h3>
+    <span>posted by <strong>{{item.seller.username}}</strong></span>
+    <hr>
     {% endfor %}
 
 </div>
